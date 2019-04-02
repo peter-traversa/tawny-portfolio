@@ -76,8 +76,8 @@ class Main extends React.Component {
             </ul>
           </form>
           <ul className="icons">
-            <li><a href="https://www.instagram.com/tawnytwass/" target="_blank" className="icon fa-instagram"><span className="label">Instagram</span></a></li>
-            <li><a href="https://www.imdb.com/name/nm4399180/" target="_blank" className="icon fa-imdb"><span className="label">GitHub</span></a></li>
+            <li><a href="https://www.instagram.com/tawnytwass/" target="_blank" rel="noopener noreferrer" className="icon fa-instagram"><span className="label">Instagram</span></a></li>
+            <li><a href="https://www.imdb.com/name/nm4399180/" target="_blank" rel="noopener noreferrer" className="icon fa-imdb"><span className="label">GitHub</span></a></li>
           </ul>
           {close}
         </article>
