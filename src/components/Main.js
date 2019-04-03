@@ -5,6 +5,7 @@ import ReactPlayer from 'react-player';
 import resume from '../images/resume.jpg';
 import biopic from '../images/LS1.jpg';
 import presspic from '../images/presspic.jpg';
+import { Link } from 'gatsby';
 
 class Main extends React.Component {
   render() {
@@ -32,16 +33,20 @@ class Main extends React.Component {
         <article id="reels" className={`${this.props.article === 'reels' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Reels</h2>
           <h3 className='minor'>Dramatic</h3>
-          <ReactPlayer url='https://vimeo.com/217247146' width='38rem' /><br></br>
+          <ReactPlayer url='https://vimeo.com/217247146' width='35rem' />
+          <br></br>
           <h3 className='minor'>Comedic</h3>
-          <ReactPlayer url='https://vimeo.com/217246477' width='38rem' />
+          <ReactPlayer url='https://vimeo.com/217246477' width='35rem' />
           {close}
         </article>
 
         <article id="gallery" className={`${this.props.article === 'gallery' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Gallery</h2>
-          <p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-          <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
+          <Link to="/headshots">Headshots</Link><br></br>
+          <Link to="/portraits">Portraits</Link><br></br>
+          <Link to="/theatre">Theatre</Link><br></br>
+          <Link to="/film">Film</Link><br></br>
+          <Link to="/television">Television</Link>
           {close}
         </article>
 
