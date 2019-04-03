@@ -4,7 +4,7 @@ import ReactPlayer from 'react-player';
 
 import resume from '../images/resume.jpg';
 import biopic from '../images/LS1.jpg';
-import presspic from '../images/LS2.jpg';
+import presspic from '../images/presspic.jpg';
 
 class Main extends React.Component {
   render() {
