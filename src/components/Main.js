@@ -13,12 +13,6 @@ class Main extends React.Component {
 
     let close = <div className="close" onClick={() => {this.props.onCloseArticle()}}></div>
 
-    const headshotImages = [
-      {
-        original: "https://lh3.googleusercontent.com/y1k45VSOsQy1I24RvWDoQVo_VsZXr0HAmjDwrL3odGRXCktN8OSjnj2g1I4AGwPiNrudcVwe3zU3FFmP4aOpo04QxfOGODBmaUthbbYELqn7vaTWQ-mUm5e48iTvHB7fp-1AYRUWBZ_TamdyNnGuER1wMngy9w7GcZLQJoa6tc_bQpnIyQDO5hI1jw2YbPH0gp03YpQgFcd0mf-JbGPUad8Z_5ReAtEkKIBisWCKBBBBdSdgwDFpKtSWONn26KKhiGO_dvQ6EziLj0n4M92xZ9YlqrBjddN-eHqIRD5Cu8beebg9FQnLoEZPrh040Fz1LAzu2TtwazaiPxCTYne-SLBdzkyzK_twbNuXDLRCHv9QSXvVvbmEaZvQcBzqYNebo89J3J2e0UTTl70uzJP9gWWasNfVFWhoZSJV3M2tsEvObJy0rpnqQxbBuWnha7L9fNc2Vlyla2c51fh7QEqzvzTg1dge8BDoT4hwXX4QexjKi3dvsNTVz2OmuAmI4m1xSBJcZiagQxxmDsn7ufm5A5sF9mv85NCrBwWzRp2XYje_O8VAn7NA3XixevLYe77DAqT3OGlXtNn2PaL87YSgz-XrJsFMlB0bxG2VYq5WYIdEx1O_RlrGP9wrTaqe5n7zwih2gQ1wFoe5Eo_yRkkFj3B-HRYMQL3uAgPiGXPrbSTI8hbpdl0fQ5Hb9Y3zwNqHPn7733twznHINE9rKxNYX8Lf=w997-h739-no"
-      },
-    ]
-
     return (
       <div ref={this.props.setWrapperRef} id="main" style={this.props.timeout ? {display: 'flex'} : {display: 'none'}}>
 
