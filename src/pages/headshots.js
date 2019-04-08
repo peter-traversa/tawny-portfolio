@@ -15,7 +15,9 @@ const Headshots = () => (
   <Layout>
     <Link to="/">Go back to the homepage</Link>
     <h1>Headshots</h1><br></br>
+    <div height='80%' >
     <Pictures images={images} />
+    </div>
   </Layout>
 )
 

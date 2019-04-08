@@ -1,49 +1,39 @@
-import React from 'react';
-import Slider from 'react-slick';
+import React, { Component } from 'react';
+import ReactModal from 'react-modal';
 
-var settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1
-};
+class Pictures extends Component {
+  constructor(props) {
+    super()
+    this.state = {
+      showModal: false,
+      currentPic: null,
+    }
+  }
 
-const Pictures = (props) => {
-  return (
-    // <ul listStyleType='none'>
-    //   {props.images.map(img => {
-    //     return(<li style={{ listStyleType: "none", paddingTop: '1em' }}><img src={img} alt={img} width='90%' ></img></li>)
-    //   })}
-    // </ul>
-    // <div width='90%'>
-    //   <Slider>
-    //     {props.images.map((image, idx) => {
-    //       return <img src={image} alt={image} id={idx} ></img>
-    //     })}
-    //   </Slider>
-    // </div>
-    <Slider {...settings}>
-    <div>
-      <h3>1</h3>
-    </div>
-    <div>
-      <h3>2</h3>
-    </div>
-    <div>
-      <h3>3</h3>
-    </div>
-    <div>
-      <h3>4</h3>
-    </div>
-    <div>
-      <h3>5</h3>
-    </div>
-    <div>
-      <h3>6</h3>
-    </div>
-  </Slider>
-  )
+  render() {
+    const handlePictureClick = (e)=> {
+      this.setState({showModal: true, currentPic: e.target});
+      console.log(this.state);
+    };
+    const handleModalClose = () => {
+      this.setState({showModal: false, currentPic: null});
+      console.log(this.state);
+    }
+    return (
+      <div >
+        <ReactModal 
+          isOpen={this.state.isOpen}
+          onRequestClose={handleModalClose}
+        >
+          <button onClick={handleModalClose}></button>
+          <img src={this.state.currentPic} alt={this.state.currentPic} ></img>
+        </ReactModal>
+        {this.props.images.map((image, idx) => {
+          return <img src={image} alt={image} key={idx} onClick={handlePictureClick} ></img>
+        })}
+      </div>
+    )
+  }
 }
 
 export default Pictures
