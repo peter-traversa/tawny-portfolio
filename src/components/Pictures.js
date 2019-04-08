@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import ReactModal from 'react-modal';
+// import ReactModal from 'react-modal';
+import Slider from 'react-slick';
+import '../assets/scss/test.css';
 
 class Pictures extends Component {
   constructor(props) {
@@ -19,18 +21,20 @@ class Pictures extends Component {
       this.setState({showModal: false, currentPic: null});
       console.log(this.state);
     }
+    const settings = {
+      dots: true,
+    }
     return (
-      <div >
-        <ReactModal 
-          isOpen={this.state.isOpen}
-          onRequestClose={handleModalClose}
-        >
-          <button onClick={handleModalClose}></button>
-          <img src={this.state.currentPic} alt={this.state.currentPic} ></img>
-        </ReactModal>
-        {this.props.images.map((image, idx) => {
-          return <img src={image} alt={image} key={idx} onClick={handlePictureClick} ></img>
-        })}
+      <div className='container'>
+        <Slider settings={settings} >
+          {this.props.images.map((image, idx) => {
+            return (
+              <div>
+                <img src={image} alt={image} key={idx} className='slick-image'></img>
+              </div>
+            )
+          })}
+        </Slider>
       </div>
     )
   }
