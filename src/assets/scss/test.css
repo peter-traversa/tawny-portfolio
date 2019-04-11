@@ -3,10 +3,8 @@
 
 .container {
   padding: 40px;
-  max-width: 80vw;
-  max-height: 80vh;
-  color: #333;
-  box-shadow: #333;
+  max-width: 95vw;
+  max-height: 95vh;
 }
 
 h3 {
@@ -102,7 +100,7 @@ h3 {
 }
 
 .slick-image {
-  max-width: 75vw;
-  max-height: 75vh;
+  max-width: 85vw;
+  max-height: 85vh;
 }
 
