@@ -2,12 +2,11 @@
 @import "~slick-carousel/slick/slick-theme.css";
 
 .container {
-  margin: 0 auto;
   padding: 40px;
   max-width: 80vw;
   max-height: 80vh;
   color: #333;
-  background: black;
+  box-shadow: #333;
 }
 
 h3 {
@@ -95,14 +94,15 @@ h3 {
   height: 180px;
 }
 .slick-arrow {
-  background-color: grey;
+  background-color: black;
   /* color: black; */
 }
 .slick-arrow:hover {
-  background-color: grey;
+  background-color: black;
 }
 
 .slick-image {
   max-width: 75vw;
   max-height: 75vh;
 }
+
