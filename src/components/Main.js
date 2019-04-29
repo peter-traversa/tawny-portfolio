@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Press from './Press';
 import Reels from './Reels';
-import Contact from './Contact';
+import Social from './Social';
 import resume from '../images/resume.jpg';
 import biopic from '../images/LS1.jpg';
 import { Link } from 'gatsby';
@@ -51,8 +51,8 @@ class Main extends React.Component {
           {close}
         </article>
 
-        <article id="contact" className={`${this.props.article === 'contact' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
-          <Contact />
+        <article id="social" className={`${this.props.article === 'social' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
+          <Social />
           {close}
         </article>
 
